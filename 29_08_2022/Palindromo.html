@@ -1,21 +1,32 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"><title>PAlindromo</title>
-
+        <meta charset="utf-8"><title>JavaScript</title>
     </head>
     <body>
-        <h1> Data atual </h1>
-        <br>
+        <h1>Teste de palindromo</h1>
+        <div id="palindromo">
+            <label for="campoPalpite">Digite algumas letras: </label>
+            <input type="text" id="campoPalpite" class="campoPalpite">
+            <button id="verifica">-></button>
+
+        </div>
+        <script>
+            document.getElementById("verifica").addEventListener('click', function() { 
+                let palindromo = "";
+                let palavra = document.getElementById("campoPalpite").value;
+                for(let i = palavra.length -1; i >= 0; i--){
+                    palindromo += palavra.charAt(i);
+                }
+                if(palindromo==palavra) {
+                    alert(palavra+" é um palíndromo");
+                }
+                else {
+                    alert(palavra+" não é um palíndromo");
+                }
+                console.log(palavra);
+            }); 
+
+    </script>
     </body>
-
-    <script type="text/javascript" src="palindromo.js">
-
-    for(int i = palavra.length() -1; i >= 0; i--){
-    			
-        palindromo += palavra.charAt(i);
-
-    }
-</script>
 </html>
