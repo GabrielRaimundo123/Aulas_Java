@@ -5,19 +5,54 @@
     </head>
     <body>
         <h1>verifica caracteristicas</h1>
-        <div id="caracteristica">
+        <div id="caracteristicas">
             <label for="marca">Digite a marca do carro: </label>
+            <input type="text" id="caracteristica marca" class="caracteristica marca">
+            <button id="verifica marca">-></button>
+
             <label for="modelo">Digite o modelo: </label>
+            <input type="text" id="caracteristica modelo" class="caracteristica modelo">
+            <button id="verifica modelo">-></button>
+            
             <label for="ano">Digite o ano: </label>
+            <input type="number" id="caracteristica ano" class="caracteristica ano">
+            <button id="verifica ano">-></button>
+
             <label for="cor">Digite o cor: </label>
-            <input type="text" id="caracteristicas" class="caracteristicas">
-            <button id="verifica caracter">-></button>
+            <input type="text" id="caracteristica cor" class="caracteristica cor">
+            <button id="verifica cor">-></button>
+
+            <label for="quilometragem">Digite a quilometragem: </label>
+            <input type="number" id="caracteristica quilometragem" class="caracteristica quilometragem">
+            <button id="verifica quilometragem">-></button>
+
+            <br>
+            <br>
+
+            <label for="valor_fipe">Digite o valor_fipe: </label>
+            <input type="number" id="caracteristica valor_fipe" class="caracteristica valor_fipe">
+            <button id="verifica valor_fipe">-></button>
         </div>
     <script>
-        document.getElementById("verifica caracter").addEventListener('click', function() { 
-            
-            
+        document.getElementById("caracteristica marca").addEventListener('click', function() { 
+            let carro = "";
+                marca = document.getElementById("caracteristica marca").value;
+                modelo = document.getElementById("caracteristica modelo").value;
+                ano = document.getElementById("caracteristica ano").value;
+                cor = document.getElementById("caracteristica cor").value;
+                quilometragem = document.getElementById("caracteristica quilometragem").value;
+                valor_fipe = document.getElementById("caracteristica valor_fipe").value;
+
+            function anosUtilizacao(){
+                let ano = new Date();
+                Option = {years: 'Number'};
+                return data.toLocalDataString('pt-BR' )
+
+
+            }
+                
 
     </script>
 </body>
 </html>
+
